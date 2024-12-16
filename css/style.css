@@ -96,6 +96,7 @@ body{
     position: absolute;
     bottom: 16vh;
     left:12vw;
+    top: 80vh;
     transition: transform 0.5s ease-in-out;
 }
 .pointer-span{
@@ -235,9 +236,9 @@ img{
     color: #002c3e;
 }
 .hr{
-    margin-left: 25vw;
-    margin-right: 25vw;
-    width: 50vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    width: 50vw !important;
     height: 1vh;
 }
 
@@ -309,6 +310,112 @@ img{
 }
 .footer-link{
     color: var(--red) !important;
+    font-size: 20px !important;
+}
+@media screen and (min-width : 2000px) {
+    .nav-item{
+        font-size: 37px !important;
+    }
+    .logo{
+        width: 18vw !important;
+        height: 7vh !important;
+        margin-left: -10vw !important;
+    }
+    .text-arriv{
+    font-size: 50px !important;
+    margin-top: 10vh !important;
+    }
+    .text-pro{
+        font-size: 90px !important;
+    }
+    .para-arriv{
+        font-size: 45px !important;
+    }
+    .box{
+        height: 25vh !important;
+        width: 30vw !important;
+        font-size: 40px !important;
+    }
+    .response-3{
+        font-size: 45px !important;
+    }
+    .para-slide{
+        font-size: 45px !important;
+    }
+    .footer-end{
+        font-size: 40px !important;
+    }
+    .footer{
+        font-size: 40px;
+    }
+    .footer-para{
+    font-size: 30px !important;
+    }
+    .footer-title{
+        font-size: 30px !important;
+        margin-left: 10vw !important;
+    }
+    .footer-2{
+        padding-top: 5vh !important;
+        font-size: 45px !important;
+    }
+    .text-about{
+        font-size: 70px !important;
+    }
+    .response{
+        font-size: 50px !important;
+    }
+    .response-2{
+        font-size: 40px !important;
+    }
+    .subscribe-h1{
+        font-size: 65px !important;
+    }
+    .subscribe-para{
+        font-size: 40px !important;
+    }
+    .sub-input{
+        width: 60vw !important;
+        height: 7vh !important;
+    }
+    .btn-input{
+        width: 15vw !important;
+        height: 4vh !important;
+        font-size: 25px !important;
+        
+    }
+    .response-btn{
+        width: 12vw !important;
+        height: 5vh;
+        font-size: 35px !important;
+    }
+    .p-grid{
+        font-size: 70px !important;
+    }
+    .footer-blue{
+        font-size: 40px !important;
+        margin-top: 15vh !important;
+    }
+    input{
+        height: 10vh !important;
+    }
+    ::placeholder{
+        font-size: 25px !important;
+    }
+    .submit{
+        width: 15vw;
+        height: 5vh !important;
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:1441px){
+    .text-center{
+        font-size: x-large;
+    }
+    #products{
+        margin-left: 12vw !important;
+        margin-right: 8vw !important;
+    }
 }
 @media screen and (max-width:768px) {
     .img-new-arriv{
@@ -333,7 +440,13 @@ img{
     }
     .card{
         width: 35vw;
-    }    
+    }  
+    .footer-blue{
+        height: 90vh;
+    }
+    .submit{
+        margin-left: 21vw;
+    }
 }
 @media screen and (max-width : 426px) {
     .text-1-slide{
@@ -363,9 +476,6 @@ img{
     .text-pro{
         font-size: 40px;
     }
-    .footer-blue{
-        height: 90vh;
-    }
     .next-icon{
         margin-bottom: 6vh !important;
     }    
@@ -388,6 +498,9 @@ img{
         padding-left: 2vw !important;
         padding-right: 2vw !important;
     }
+    .footer-blue{
+        height: 100vh;
+    }
 }
 @media screen and (max-width : 376px) {
     .prev-icon{
@@ -407,7 +520,24 @@ img{
         padding-right: 2vw !important;
     }
 }
+@media screen and (max-width : 361px) {
+    .logo{
+        width: 30vw !important;
+    }
+    .footer-link{
+        font-size: 15px !important;
+    }
+    .text-about{
+        font-size: 24px !important;
+    }
+    #products{
+        margin-left: 9vw !important;
+    }    
+}
 @media screen and (max-width : 325px) {
+    .logo{
+        width: 30vw !important;
+    }
     .btn-input{
         font-size: 14PX;
         padding-left: 0 !important;
@@ -428,5 +558,25 @@ img{
     }
     .text-about{
         font-size: 22px !important;
+    }
+    .footer-link{
+        font-size: 12px !important;
+    }
+    .footer-para{
+        font-size: 16px !important;
+    }
+    .footer-title{
+        margin-left: 5vw !important;
+    }
+    .prev-icon{
+        margin-left: 12vw;
+        margin-bottom: 17vh !important;
+    }
+    .next-icon{
+        margin-left:-30vw !important;
+        margin-bottom: 17vh !important;
+    }
+    .fam-footer{
+        font-size: 15px !important;
     }
 }

@@ -5,8 +5,8 @@ $(document).ready(function () {
       const productsHtml = productsArray.map(product => `
         <div class="card">
           <img src="${product.thumbnail}" alt="${product.title}" class="img">
-          <span class="title">${product.title}</span>
-          <span class="price">$${product.price}</span>
+          <span class="title rounded-pill">${product.title}</span>
+          <span class="price rounded-pill">$${product.price}</span>
           <div class="product-actions">
             <button class="add-to-cart">Add To Cart</button>
             <button class="buy-now">Buy Now</button>
@@ -17,23 +17,30 @@ $(document).ready(function () {
     });
   });
   $(document).on("mouseover",".card",function(){
-    $(".buy-now ,.add-to-cart").show();
+    $(this).find(".buy-now, .add-to-cart").show();
   })
   $(document).on("mouseout",".card",function(){
-    $(".buy-now,.add-to-cart").hide();
+    $(this).find(".buy-now,.add-to-cart").hide();
   })
 // Slider
-$(document).ready(function () {
-    const $slides = $(".slide-test"); // Select all slides
-    const $pointers = $(".pointer-span"); // Select pointers
-    let currentIndex = 0; // Start with the first slide
-    const slideCount = $slides.length; // Total number of slides
-    function switchSlide() {
-    $slides.removeClass("active").addClass("d-none");
-    $pointers.removeClass("active-pointer-span");
-    currentIndex = (currentIndex + 1) % slideCount;
-    $slides.eq(currentIndex).addClass("active").removeClass("d-none");
-    $pointers.eq(currentIndex).addClass("active-pointer-span");
+setInterval(() => {
+  $(document).ready(function () {
+    let activepointer =$('.active-pointer-span');
+    if (activepointer.next().length > 0) {
+      activepointer.removeClass("active-pointer-span");
+      activepointer.next().addClass("active-pointer-span");
+    } else {
+      $('.pointer-span').last().removeClass("active-pointer-span");
+      $('.pointer-span').first().addClass("active-pointer-span");
     }
-    setInterval(switchSlide, 1000);
-});
+  });
+}, 5000);
+$(document).on('click','.pointer-span', function(){
+  let order = $(this).data('order');
+  $('.active-pointer-span').removeClass("active-pointer-span");
+  $(this).addClass("active-pointer-span");
+  let active_slide =$('.slide-test.active');
+  console.log(active_slide);
+  active_slide.removeClass('active').addClass('d-none');
+  $('.slide-test').eq(order).addClass('active').removeClass('d-none');
+})
